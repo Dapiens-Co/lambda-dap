@@ -1,0 +1,37 @@
+{"SystemOfRecord": 
+    {
+        "CurrentSnapshot": 
+        {
+        "loanNumber": "80000",
+        "SubjectPropertyAddress": 
+        {
+            "addressLineOne": "S 163rd St",
+            "addressLineTwo": null,
+            "city": "Burien",
+            "stateId": "WA",
+            "postalCodeId": "98148-51",
+            "houseNumber": "351",
+            "directionPrefix": "S",
+            "streetName": "163rd",
+            "directionSuffix": null,
+            "streetSuffix": "St",
+            "apartmentUnitNumber": null,
+            "county": "KING COUNTY"
+        },
+        "SubjectPropertyFloodInfo": 
+        {
+            "floodCertificateDate": "2022-10-21",
+            "floodZoneCode": "",
+            "nfipCommunityNumber": "530",
+            "nfipCommunityName": "BURIEN, CITY OF",
+            "nfipMapPanelNumber": "53033",
+            "nfipCommunityStatus": "02",
+            "specialFloodHazardAreaFlag": false
+        },
+        "homeLoanKeyDates":
+        {
+            "applicationDate": "2022-10-19"
+        }
+    }
+}
+}

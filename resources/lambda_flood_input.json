@@ -1,0 +1,35 @@
+{
+  "Ext": "<External><FloodCert><loanNumber>80000</loanNumber><NFIPInfo><communityNumber>530321</communityNumber><communityName>BURIEN, CITY OF</communityName><mapNumber>53033</mapNumber><programStatusCode>02</programStatusCode> </NFIPInfo><BasicInfo> <determinationDate>2022/10/21</determinationDate></BasicInfo><SubjectPropertyAddress><addressLine1>S 163RD ST</addressLine1><addressLine2></addressLine2><city>BURIEN</city><state>WA</state><zip>98148-51</zip> <county>KING COUNTY</county></SubjectPropertyAddress> </FloodCert></External>",
+  "SOR": {
+    "SystemOfRecord": {
+      "CurrentSnapshot": {
+        "loanNumber": "80000",
+        "SubjectPropertyAddress": {
+          "addressLineOne": "S 163rd St",
+          "addressLineTwo": null,
+          "city": "Burien",
+          "stateId": "WA",
+          "postalCodeId": "98148-51",
+          "houseNumber": "351",
+          "directionPrefix": "S",
+          "streetName": "163rd",
+          "directionSuffix": null,
+          "streetSuffix": "St",
+          "apartmentUnitNumber": null
+        },
+        "SubjectPropertyFloodInfo": {
+          "floodCertificateDate": "2022-10-21",
+          "floodZoneCode": "X",
+          "nfipCommunityNumber": "530",
+          "nfipCommunityName": "BURIEN, CITY OF",
+          "nfipMapPanelNumber": "53033",
+          "nfipCommunityStatus": "02",
+          "specialFloodHazardAreaFlag": false
+        },
+        "homeLoanKeyDates": {
+          "applicationDate": "2022-10-19"
+        }
+      }
+    }
+  }
+}

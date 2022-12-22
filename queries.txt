@@ -1,0 +1,29 @@
+1. Is there a restriction to work out or relational Tables.
+    They will be imported , and to be developed software needs to work of the relational table ?
+1.b Has it been thought about using nosql and modelling solution based of so ?
+
+2. How to we define the Black Box boundaries of this software component ,
+  that enables perfect pluggability a production running system.
+    What Single Input  ?
+    What Single Output ?
+    What all to persist on completion ?
+
+3. What is the purpose/consideration for seeking a Rule Engine. Are the pros/cons weighed in about how will rules engine support pure business logics that are not just mathametical operators or standard functions.
+
+4. Is there a existing reference system which uses any of Rules Engine or its implemented all in code.
+   And hence that's the business targeted:
+     If only there was a system where business logic could be moved out from Code and Relational tables.
+     Make a system where logic doesn't need programming addition but only rulesEngine that can be maintained via UI by business operators.
+
+       AND
+
+   If not above , what's the GAP thats being targetted for implementation. Since it looks like a running system already.
+
+5.  Is the Flood , just one subcomponent of multiple such Validation components ?
+    Or only Flood Validation needs to be exposed as a Service API. ?
+5.b  If not , whats the macro level picture of all components ?
+    How many such components aggregate to create the entire application ?
+     [ Need to understand the scale ]
+5.c What vision for application deployment.
+   Software as a service on cloud and interactions only via APIS ?
+   Which System will be client to these ? How are they intended to use this development.

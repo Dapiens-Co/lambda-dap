@@ -1,0 +1,126 @@
+[
+  {
+    "ruleId": "Flood.001",
+    "ruleNarrative": "Property Address on Flood Cert should closely match Subject Property Address in SOR",
+    "ruleGroup": "Flood",
+    "ruleSubGroup": "",
+    "ruleLogicNotes":"VAL: If all subrules = VAL | INV: If any subrule is INV | REF: If any subrule is REF",
+    "subRules": [
+      {
+        "ruleId": "Flood.001.AA", 
+        "ruleField1label": "SystemOfRecord.CurrentSnapshot.SubjectPropertyAddress.addressLineOne",
+        "ruleOperator": "=",
+        "ruleField2label": "External.FloodCert.SubjectPropertyAddress.addressLine1"
+      },
+      {
+        "ruleId": "Flood.001.AB",
+        "ruleField1label": "SystemOfRecord.CurrentSnapshot.SubjectPropertyAddress.addressLineTwo",
+        "ruleOperator": "=",
+        "ruleField2label": "External.FloodCert.SubjectPropertyAddress.addressLine2"
+      },
+      {
+        "ruleId": "Flood.001.AC",
+        "ruleField1label": "SystemOfRecord.CurrentSnapshot.SubjectPropertyAddress.city",
+        "ruleOperator": "=",
+        "ruleField2label": "External.FloodCert.SubjectPropertyAddress.city"
+      },
+      {
+        "ruleId": "Flood.001.AD",
+        "ruleField1label": "SystemOfRecord.CurrentSnapshot.SubjectPropertyAddress.stateId",
+        "ruleOperator": "=",
+        "ruleField2label": "External.FloodCert.SubjectPropertyAddress.state"
+      },
+      {
+        "ruleId": "Flood.001.AE",
+        "ruleField1label": "SystemOfRecord.CurrentSnapshot.SubjectPropertyAddress.postalCodeId",
+        "ruleOperator": "=",
+        "ruleField2label": "External.FloodCert.SubjectPropertyAddress.zip"
+      },
+      {
+        "ruleId": "Flood.001.AF",
+        "ruleField1label": "SystemOfRecord.CurrentSnapshot.SubjectPropertyAddress.county",
+        "ruleOperator": "=",
+        "ruleField2label": "External.FloodCert.SubjectPropertyAddress.county"
+      }
+    ]
+  },
+  {
+    "ruleId": "Flood.002",
+    "ruleNarrative": "NFIP Info on Flood Cert should match NFIP Info in SOR",
+    "ruleGroup": "Flood",
+    "ruleSubGroup": "",
+    "ruleLogicNotes":"VAL: If all subrules = VAL | INV: If any subrule is INV | REF: If any subrule is REF",
+    "subRules": [
+      {
+        "ruleId": "Flood.002.AA",
+        "ruleField1label": "SystemOfRecord.CurrentSnapshot.SubjectPropertyFloodInfo.floodCertificateDate",
+        "ruleOperator": "=",
+        "ruleField2label": "External.FloodCert.BasicInfo.determinationDate"
+      },
+      {
+        "ruleId": "Flood.002.AB",
+        "ruleField1label": "SystemOfRecord.CurrentSnapshot.SubjectPropertyFloodInfo.floodZoneCode",
+        "ruleOperator": "=",
+        "ruleField2label": "External.FloodCert.BasicInfo.floodZoneCode"
+      }
+    ]
+  },
+  {
+    "ruleId": "Flood.003",
+    "ruleNarrative": "Basic Info on Flood Cert should match Basic Info in SOR",
+    "ruleGroup": "Flood",
+    "ruleSubGroup": "",
+    "ruleLogicNotes":"VAL: If all subrules = VAL | INV: If any subrule is INV | REF: If any subrule is REF",
+     "subRules": [
+      {
+        "ruleId": "Flood.003.AA",
+        "ruleField1label": "SystemOfRecord.CurrentSnapshot.SubjectPropertyFloodInfo.nfipCommunityNumber",
+        "ruleOperator": "=",
+        "ruleField2label": "External.FloodCert.NFIPInfo.communityNumber"
+      },
+      {
+        "ruleId": "Flood.003.AB",
+        "ruleField1label": "SystemOfRecord.CurrentSnapshot.SubjectPropertyFloodInfo.nfipCommunityName",
+        "ruleOperator": "=",
+        "ruleField2label": "External.FloodCert.NFIPInfo.communityName"
+      },
+      {
+        "ruleId": "Flood.003.AC",
+        "ruleField1label": "SystemOfRecord.CurrentSnapshot.SubjectPropertyFloodInfo.nfipMapPanelNumber",
+        "ruleOperator": "=",
+        "ruleField2label": "External.FloodCert.NFIPInfo.mapNumber"
+      },
+      {
+        "ruleId": "Flood.003.AD",
+        "ruleField1label": "SystemOfRecord.CurrentSnapshot.SubjectPropertyFloodInfo.nfipCommunityStatus",
+        "ruleOperator": "=",
+        "ruleField2label": "External.FloodCert.NFIPInfo.programStatusCode"
+      }
+    ]
+  },
+  {
+    "ruleId": "Flood.004",
+    "ruleNarrative": "Determination Date should be on or after the Application Date",
+    "ruleGroup": "Flood",
+    "ruleSubGroup": "",
+    "ruleLogicNotes":"VAL: If External.FloodCert.Basic Info.determinationDate >= SystemOfRecord.CurrentSnapshot.KeyDate.applicationDate",
+    "subRules": []
+  },
+  {
+    "ruleId": "Flood.005",
+    "ruleNarrative": "SFHA should be only TRUE if Flood Zone starts with A or V, High Risk Flood Areas",
+    "ruleGroup": "Flood",
+    "ruleSubGroup": "",
+    "ruleLogicNotes":"VAL: AND((SOR.CS.SubjectPropertyFloodInfo.floodZoneCode(1,1) IN ('A','V'')), SOR.CS.SubjectPropertyFloodInfo.specialFloodHazardAreaFlag='Y'')",
+    "subRules": []
+    
+  },
+  {
+    "ruleId": "Flood.006",
+    "ruleNarrative": "If Subject Property is located in SFHA then community must pariticipate in NFIP",
+    "ruleGroup": "Flood",
+    "ruleSubGroup": "",
+    "ruleLogicNotes":"VAL: AND(SOR.CS.SubjectPropertyFloodInfo.specialFloodHazardAreaFlag='Y', SOR.CS.SubjectPropertyFloodInfo.nfipCommunityStatus = IN('01,'02)) NAP:SOR.CS.SubjectPropertyFloodInfo.specialFloodHazardAreaFlag='N'",
+    "subRules": []
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "ruleId": "Flood.001",
+    "ruleNarrative": "Property Address on Flood Cert should closely match Subject Property Address in SOR",
+    "ruleGroup": "Flood",
+    "ruleSubGroup": "",
+    "ruleOutcomeId": "VAL",
+    "ruleOutcomeDescription": "Valid",
+    "subRules": [
+      {
+        "ruleId": "Flood.001.AA",
+        "ruleOutcomeId": "VAL",
+        "ruleOutcomeDescription": "Valid",
+        "ruleField1label": "SOR.CS.SubjectPropertyAddress.addressLineOne",
+        "ruleOperator": "=",
+        "ruleField2label": "Ext.FCert.SubjectPropertyAddress.addr1"
+      },
+      {
+        "ruleId": "Flood.001.AB",
+        "ruleOutcomeId": "VAL",
+        "ruleOutcomeDescription": "Valid",
+        "ruleField1label": "SOR.CS.SubjectPropertyAddress.addressLineTwo",
+        "ruleOperator": "=",
+        "ruleField2label": "Ext.FCert.SubjectPropertyAddress.addr2"
+      },
+      {
+        "ruleId": "Flood.001.AC",
+        "ruleOutcomeId": "VAL",
+        "ruleOutcomeDescription": "Valid",
+        "ruleField1label": "SOR.CS.SubjectPropertyAddress.city",
+        "ruleOperator": "=",
+        "ruleField2label": "Ext.FCert.SubjectPropertyAddress.city"
+      },
+      {
+        "ruleId": "Flood.001.AD",
+        "ruleOutcomeId": "VAL",
+        "ruleOutcomeDescription": "Valid",
+        "ruleField1label": "SOR.CS.SubjectPropertyAddress.stateId",
+        "ruleOperator": "=",
+        "ruleField2label": "Ext.FCert.SubjectPropertyAddress.state"
+      },
+      {
+        "ruleId": "Flood.001.AE",
+        "ruleOutcomeId": "VAL",
+        "ruleOutcomeDescription": "Valid",
+        "ruleField1label": "SOR.CS.SubjectPropertyAddress.postalCodeId",
+        "ruleOperator": "=",
+        "ruleField2label": "Ext.FCert.SubjectPropertyAddress.zip"
+      },
+      {
+        "ruleId": "Flood.001.AF",
+        "ruleOutcomeId": "VAL",
+        "ruleOutcomeDescription": "Valid",
+        "ruleField1label": "SOR.CS.SubjectPropertyAddress.county",
+        "ruleOperator": "=",
+        "ruleField2label": "Ext.FCert.SubjectPropertyAddress.county"
+      }
+    ]
+  },
+  {
+    "ruleId": "Flood.002",
+    "ruleNarrative": "NFIP Info on Flood Cert should match NFIP Info in SOR",
+    "ruleGroup": "Flood",
+    "ruleSubGroup": "",
+    "ruleOutcomeId": "VAL",
+    "ruleOutcomeDescription": "Valid",
+    "subRules": [
+      {
+        "ruleId": "Flood.002.AA",
+        "ruleOutcomeId": "VAL",
+        "ruleOutcomeDescription": "Valid",
+        "ruleField1label": "SOR.CS.SubjectPropertyFloodInfo.floodCertificateDate",
+        "ruleOperator": "=",
+        "ruleField2label": "Ext.FCert.BasicInfo.determinationDate"
+      },
+      {
+        "ruleId": "Flood.002.AB",
+        "ruleOutcomeId": "VAL",
+        "ruleOutcomeDescription": "Valid",
+        "ruleField1label": "SOR.CS.SubjectPropertyFloodInfo.floodZoneCode",
+        "ruleOperator": "=",
+        "ruleField2label": "Ext.FCert.BasicInfo.floodZoneCode"
+      }
+    ]
+  },
+  {
+    "ruleId": "Flood.003",
+    "ruleNarrative": "Basic Info on Flood Cert should match Basic Info in SOR",
+    "ruleGroup": "Flood",
+    "ruleSubGroup": "",
+    "ruleOutcomeId": "VAL",
+    "ruleOutcomeDescription": "Valid",
+    "subRules": [
+      {
+        "ruleId": "Flood.003.AA",
+        "ruleOutcomeId": "VAL",
+        "ruleOutcomeDescription": "Valid",
+        "ruleField1label": "SOR.CS.SubjectPropertyFloodInfo.nfipCommunityNumber",
+        "ruleOperator": "=",
+        "ruleField2label": "Ext.FCert.NFIPInfo.communityNumber"
+      },
+      {
+        "ruleId": "Flood.003.AB",
+        "ruleOutcomeId": "VAL",
+        "ruleOutcomeDescription": "Valid",
+        "ruleField1label": "SOR.CS.SubjectPropertyFloodInfo.nfipCommunityName",
+        "ruleOperator": "=",
+        "ruleField2label": "Ext.FCert.NFIPInfo.communityName"
+      },
+      {
+        "ruleId": "Flood.003.AC",
+        "ruleOutcomeId": "VAL",
+        "ruleOutcomeDescription": "Valid",
+        "ruleField1label": "SOR.CS.SubjectPropertyFloodInfo.nfipMapPanelNumber",
+        "ruleOperator": "=",
+        "ruleField2label": "Ext.FCert.NFIPInfo.mapNumber"
+      },
+      {
+        "ruleId": "Flood.003.AD",
+        "ruleOutcomeId": "VAL",
+        "ruleOutcomeDescription": "Valid",
+        "ruleField1label": "SOR.CS.SubjectPropertyFloodInfo.nfipCommunityStatus",
+        "ruleOperator": "=",
+        "ruleField2label": "Ext.FCert.NFIPInfo.programStatusCode"
+      }
+    ]
+  },
+  {
+    "ruleId": "Flood.004",
+    "ruleOutcomeId": "VAL",
+    "ruleNarrative": "Determination Date should be on or after the Application Date",
+    "ruleGroup": "Flood",
+    "ruleSubGroup": "",
+    "ruleOutcomeDescription": "Valid"
+  },
+  {
+    "ruleId": "Flood.005",
+    "ruleOutcomeId": "VAL",
+    "ruleNarrative": "SFHA should be only TRUE if Flood Zone starts with A or V, High Risk Flood Areas",
+    "ruleGroup": "Flood",
+    "ruleSubGroup": "",
+    "ruleOutcomeDescription": "Valid"
+  },
+  {
+    "ruleId": "Flood.005",
+    "ruleOutcomeId": "VAL",
+    "ruleNarrative": "If Subject Property is located in SFHA then community must pariticipate in NFIP",
+    "ruleGroup": "Flood",
+    "ruleSubGroup": "",
+    "ruleOutcomeDescription": "Valid"
+  }
+]

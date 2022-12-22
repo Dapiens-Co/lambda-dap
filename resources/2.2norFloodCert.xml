@@ -1,0 +1,23 @@
+<External>
+    <FloodCert>
+        <loanNumber>80000</loanNumber>
+        <NFIPInfo>
+            <communityNumber>530</communityNumber>
+            <communityName>BURIEN, CITY OF</communityName>
+            <mapNumber>53033</mapNumber>
+            <programStatusCode>02</programStatusCode>
+        </NFIPInfo>
+        <BasicInfo>
+            <determinationDate>2022/10/21</determinationDate>
+            <floodZoneCode>X</floodZoneCode>
+        </BasicInfo>
+        <SubjectPropertyAddress>
+            <addressLine1>S 163RD ST</addressLine1>
+            <addressLine2></addressLine2>
+            <city>BURIEN</city>
+            <state>WA</state>
+            <zip>98148-51</zip>
+            <county>KING COUNTY</county>
+        </SubjectPropertyAddress>
+    </FloodCert>
+</External>

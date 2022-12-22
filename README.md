@@ -3,8 +3,7 @@
 #### 1. AWS Step + Lambda + Drools Opensource
 https://aws.amazon.com/blogs/compute/using-aws-step-functions-and-amazon-dynamodb-for-business-rules-orchestration/
 
-## Notes. ( Why rules need to be coded for , n oIndustry standard Engine )
-
+## Notes.  
 1. While comparing for = on Date natured fields.. 
   Custom implementaito needed : 
 ```
@@ -12,8 +11,8 @@ https://aws.amazon.com/blogs/compute/using-aws-step-functions-and-amazon-dynamod
 "floodCertificateDate": "2022-10-21",
 ```
 
-2. 2.1norSORinput.json 
-  SubjectPropertyAddress.county is missing -- added manual
+2. 2.1norSORinput.json   
+  SubjectPropertyAddress.county is missing -- added manual  
 
-3. 2.2norFloodCert.xml
-   ./FloodCert/BasicInfo/floodZoneCode element missing -- added manual
+3. 2.2norFloodCert.xml  
+   ./FloodCert/BasicInfo/floodZoneCode element missing -- added manual  
